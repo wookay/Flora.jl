@@ -1,4 +1,4 @@
-module test_flora_forward_flux
+module test_topics_forward_flux
 
 using Test
 using Flux.Tracker
@@ -11,4 +11,4 @@ y, back = Tracker.forward(f, 3)
 Tracker.forwarddiff
 @test Tracker.forwarddiff(f, 3) == y
 
-end # module test_flora_forward_flux
+end # module test_topics_forward_flux
