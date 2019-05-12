@@ -9,7 +9,7 @@ os:
 
 julia:
   - 1.1
-  - nightly
 
 script:
-  - julia --color=yes -e 'using Pkg; Pkg.test()'
+  - julia --color=yes -e 'using ForwardDiff, Flux, Zygote'
+  - JIVE_PROCS=auto julia --color=yes -e 'using Pkg; Pkg.test()'
