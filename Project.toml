@@ -11,6 +11,7 @@ Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 Jive = "ba5e3d4b-8524-549f-bc71-e76ad9e9deed"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
 
 [targets]
-test = ["Test", "Jive"]
+test = ["Test", "Jive", "Images"]
