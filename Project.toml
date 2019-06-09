@@ -4,14 +4,16 @@ uuid = "95e2cd10-e390-11e8-3576-8187cc9061f0"
 version = "0.1.0"
 
 [deps]
-ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
 Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
 Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 Jive = "ba5e3d4b-8524-549f-bc71-e76ad9e9deed"
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
 Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+CoordinateTransformations = "150eb455-5306-5404-9cee-2592286d6298"
+Tensors = "48a634ad-e948-5137-8d70-aa71f2a747f4"
 
 [targets]
-test = ["Test", "Jive", "Images"]
+test = ["Test", "Jive", "ForwardDiff", "Images", "CoordinateTransformations", "Tensors"]
