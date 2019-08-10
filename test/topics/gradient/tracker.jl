@@ -1,7 +1,7 @@
-module test_topics_gradient_flux
+module test_topics_gradient_tracker
 
 using Test
-using Flux.Tracker # TrackedArray
+using Tracker # TrackedArray
 
 Tracker.gradient
 @test Tracker.gradient(x->x[1], 5:7) == (TrackedArray([1, 0, 0]), )
@@ -16,4 +16,4 @@ Tracker.jacobian
 @test Tracker.hessian(x->1, 5:7) == [0 0 0; 0 0 0; 0 0 0]
 @test Tracker.hessian(x->1.0, 5:7) == [0 0 0; 0 0 0; 0 0 0]
 
-end # module test_topics_gradient_flux
+end # module test_topics_gradient_tracker

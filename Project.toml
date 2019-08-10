@@ -14,6 +14,9 @@ ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
 Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
 CoordinateTransformations = "150eb455-5306-5404-9cee-2592286d6298"
 Tensors = "48a634ad-e948-5137-8d70-aa71f2a747f4"
+UnicodePlots = "b8865327-cd53-5732-bb35-84acbb429228"
+Tracker = "9f7883ad-71c0-57eb-9f7f-b5c9e6d3789c"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
 [targets]
-test = ["Test", "Jive", "ForwardDiff", "Images", "CoordinateTransformations", "Tensors"]
+test = ["Test", "Jive", "ForwardDiff", "Images", "CoordinateTransformations", "Tensors", "UnicodePlots", "Tracker", "Printf"]

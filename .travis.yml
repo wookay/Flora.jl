@@ -10,5 +10,8 @@ os:
 julia:
   - 1.1
 
+before_script:
+  - julia --color=yes -e 'using Pkg; pkg"add Flux#zygote"'
+
 script:
   - JIVE_PROCS=auto julia --color=yes -e 'using Pkg; Pkg.test()'
