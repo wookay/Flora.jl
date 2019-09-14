@@ -1,3 +1,5 @@
+# module Flora.Utils
+
 macro i(name)
     prefix = String(name)
     _include_file(prefix)
@@ -14,3 +16,5 @@ function _include_file(prefix::String)
         end
     end
 end
+
+# module Flora.Utils

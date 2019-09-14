@@ -11,7 +11,8 @@ julia:
   - 1.1
 
 before_script:
-  - julia --color=yes -e 'using Pkg; pkg"add Flux#zygote"'
+  - julia --color=yes -e 'using Pkg; pkg"add Flux#master"'
+  - julia --color=yes -e 'using Pkg; pkg"add ImageFiltering#master"'
 
 script:
   - JIVE_PROCS=auto julia --color=yes -e 'using Pkg; Pkg.test()'
