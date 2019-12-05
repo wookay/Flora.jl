@@ -1,11 +1,11 @@
-module test_topics_forward_zygote
+module test_zygote_basic_pullback
 
 using Test
 using Zygote # Params
 
-# Zygote.forward
+# Zygote.pullback
 f(x) = 2x^3
-y, back = Zygote.forward(f, 3)
+y, back = Zygote.pullback(f, 3)
 @test back(1) == (y,) == (54,)
 
 # Zygote.forwarddiff
@@ -19,9 +19,9 @@ x = [1, 2]
 p = Params([W])
 @test p.order == [[1 0; 0 1]]
 
-y, back = Zygote.forward(() -> W * x, Params([W]))
+y, back = Zygote.pullback(() -> W * x, Params([W]))
 @test y == [1, 2]
 @test back([1, 1]) isa Zygote.Grads
 @test back([1, 1])[W] == [1 2; 1 2]
 
-end # module test_topics_forward_zygote
+end # module test_zygote_basic_pullback

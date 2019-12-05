@@ -1,7 +1,7 @@
 module test_topics_gradient_tracker
 
 using Test
-using Tracker # TrackedArray
+using Tracker
 
 Tracker.gradient
 @test Tracker.gradient(x->x[1], 5:7) == (TrackedArray([1, 0, 0]), )

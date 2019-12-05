@@ -4,7 +4,7 @@ using Test
 using Zygote
 
 Zygote.gradient
-@test Zygote.gradient(sin, 2pi) == (1.0, )
+@test Zygote.gradient(sin, 2pi) == (1.0, )  # cos(2pi)
 
 Zygote.forward_jacobian
 @test Zygote.forward_jacobian(identity, 5:7) == ([5, 6, 7], [1 0 0; 0 1 0; 0 0 1])
